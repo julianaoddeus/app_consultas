@@ -27,3 +27,16 @@ Aplicativo web para controlar a agenda de consulta dos pacientes de uma clínica
 - Javascript
 - jQuery
 - Bootstrap
+### SQL -  Banco de dados
+### Criação do banco de dados
+
+```sql
+CREATE TABLE `bd_consultorio`.`TB_MEDICOS` ( 
+    `id` INT NOT NULL AUTO_INCREMENT ,  
+    `nome` VARCHAR(100) NOT NULL ,  
+    `telefone` VARCHAR(20) NOT NULL ,  
+    `crm` VARCHAR(50) NOT NULL ,  
+    `especialidade` VARCHAR(50) NOT NULL ,    PRIMARY KEY  (`id`)
+) 
+ENGINE = InnoDB;
+```
