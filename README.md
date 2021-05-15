@@ -30,6 +30,10 @@ Aplicativo web para controlar a agenda de consulta dos pacientes de uma clínica
 ### SQL -  Banco de dados
 ### Criação do banco de dados
 
+
+```sql
+CREATE DATABASE `bd_consultorio`;
+```
 ```sql
 CREATE TABLE `bd_consultorio`.`TB_MEDICOS` ( 
     `id` INT NOT NULL AUTO_INCREMENT ,  
