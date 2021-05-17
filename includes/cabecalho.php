@@ -14,10 +14,13 @@
             <h1>APP Consultas</h1>
             <hr>
         </header>
-        <div class="card " style="width: 50rem;">
-            <nav >
-                <a href="../medicos/medicos-listar.php"><img src="../img/medico.png">Cadastro de médicos</a>
-                <a href="#"><img src="../img/paciente.png">Cadastro de pacientes</a>
-                <a href="#"><img src="../img/agenda.png">Agendamento de consultas</a>
+        <div>
+            <nav>
+               
+                <a class="btn btn-danger" href="../medicos/medicos-listar.php"><img src="../img/medico.png">Cadastro de médicos</a>
+                <a class="btn btn-danger" href="#"><img src="../img/paciente.png">Cadastro de pacientes</a>
+                <a class="btn btn-danger" href="#"><img src="../img/agenda.png">Agendamento de consultas</a>
+                
+                
             </nav> 
         </div>

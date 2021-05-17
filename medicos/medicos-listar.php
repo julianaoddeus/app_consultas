@@ -3,7 +3,7 @@
 <hr>
 
 <p>
-    <a href="medicos-formulario-inserir.php" class="btn btn-primary bi-plus-circle">Novo médico</a>
+    <a href="medicos-formulario-inserir.php" class="btn btn-danger bi-plus-circle">Novo médico</a>
 </p>
 
 <?php
@@ -15,7 +15,7 @@
 ?>
 
 <table class="table">
-<thead class="thead-dark">
+<thead class="border">
     <tr>
       <th scope="col">ID</th>
       <th scope="col">NOME</th>
@@ -35,7 +35,8 @@
         echo "<td>{$row_medico['telefone']}</td>";
         echo "<td>{$row_medico['crm']}</td>";
         echo "<td>{$row_medico['especialidade']}</td>";
-        echo "<td>Alterar | <a href='medicos-excluir.php?id_medico={$row_medico['id']}'>Excluir</a></td>";
+        echo "<td><a href='medicos-formulario-alterar.php?id_medico={$row_medico['id']}'>Alterar</a> | "; 
+        echo "<a href='medicos-excluir.php?id_medico={$row_medico['id']}'>Excluir</a></td>";
         echo "<tr>";
     }
 ?>
