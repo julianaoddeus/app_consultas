@@ -1,25 +1,7 @@
 <?php include "../includes/cabecalho.php";?>
 
-
-<?php include "../includes/conexao.php";
-
-$id_medico = $_GET["id_medico"];
-$sqlBusca = "SELECT * FROM tb_medicos WHERE id= {$id_medico};";
-$listaDeMedicos = mysqli_query($conexao, $sqlBusca);
-
-$nome = $telefone = $crm = $especialidade = "";
-
-while($medico = mysqli_fetch_assoc($listaDeMedicos)){
-    $nome = $medico['nome'];
-    $telefone = $medico['telefone'];
-    $crm = $medico['crm'];
-    $especialidade = $medico['especialidade'];
-}
-?>
-
-
 <div class="container">
-    <form name="formulario-alterar-medicos" method="POST" action="medicos-alterar.php">
+    <form name="formulario-inserir-medicos" method="post" action="medicos-inserir.php">
             
            <div>
                 <input type="hidden" name="id_medico" value="<?php echo $id_medico; ?>">
