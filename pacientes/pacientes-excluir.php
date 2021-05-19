@@ -1,14 +1,14 @@
 <?php
 include "../includes/conexao.php";
 
-$id_medico = $_GET['id_medico'];
+$id_paciente = $_GET['id_paciente'];
 
-$sqlExcluir = "DELETE FROM tb_medicos WHERE id = {$id_medico}";
+$sqlExcluir = "DELETE FROM tb_pacientes WHERE id = {$id_paciente}";
 $resultado = mysqli_query($conexao, $sqlExcluir);
 
 if($resultado){
     echo "Excluído com sucesso <br>";
-    echo "<a href='medicos-listar.php'>VOLTAR</a>";
+    echo "<a href='pacientes-listar.php'>VOLTAR</a>";
 }else{
     echo "Ocorreu algum erro.";
 }

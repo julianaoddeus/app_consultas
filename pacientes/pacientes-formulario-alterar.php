@@ -1,11 +1,7 @@
 <?php include "../includes/cabecalho.php";?>
 
 <div class="container">
-    <form name="formulario-inserir-medicos" method="post" action="medicos-inserir.php">
-            
-           <div>
-                <input type="hidden" name="id_medico" value="<?php echo $id_medico; ?>">
-           </div>
+    <form name="formulario-inserir-pacientes" method="post" action="pacientes-inserir.php">
             
             <div class="form-row d-flex pb-3 ">
                 <div class="form-group col-md-3 p-2">
@@ -19,18 +15,13 @@
                 <br>
             </div> 
 
-            <div class="form-row d-flex pb-3">  
+            <div class="form-row  pb-3">  
                  <div class="form-group col-md-3 p-2">
-                    <label>CRM</label><input type="text" class="form-control" id="crm"  name="crm">
+                    <label>DATA DE NASCIMENTO</label><input type="date" class="form-control" id="dataNascimento"  name="dataNascimento">
                 </div>
                 <div class="form-group col-md-3 p-2">
-                    <label>ESPECIALIDADES</label>
-                    <select class="form-control" name="especialidade">
-                            <option selected>Escolha...</option>
-                            <option value="Cardiologista" <?php if($especialidade == 'Cardiologista'){ echo 'selected'; } ?>>Cardiologista</option>
-                            <option value="Nutricionista" <?php if($especialidade == 'Nutricionista'){ echo 'selected'; } ?>>Nutricionista</option>
-                            <option value="Ortopedista"   <?php if($especialidade == 'Ortopedista'  ){ echo 'selected'; } ?>>Ortopedista</option>
-                    </select>
+                    
+                    <input type="checkbox"  id="convenio" name="convenio"> <label>CONVÊNIO</label>
                 </div>
 
                 

@@ -1,7 +1,7 @@
 <?php include "../includes/cabecalho.php";?>
 
 <div class="container">
-    <form name="formulario-inserir-medicos" method="post" action="medicos-inserir.php">
+    <form name="formulario-inserir-pacientes" method="post" action="pacientes-inserir.php">
             
             <div class="form-row d-flex pb-3 ">
                 <div class="form-group col-md-3 p-2">
@@ -17,20 +17,17 @@
 
             <div class="form-row d-flex pb-3">  
                  <div class="form-group col-md-3 p-2">
-                    <label>CRM</label><input type="text" class="form-control" id="crm"  name="crm">
+                    <label> DATA NASCIMENTO</label><input type="date" class="form-control" id="dataNascimento"  name="dataNascimento">
                 </div>
-                <div class="form-group col-md-3 p-2">
-                    <label>ESPECIALIDADES</label>
-                    <select class="form-control " name="especialidade">
-                            <option selected>Escolha...</option>
-                            <option value="Cardiologista">Cardiologista</option>
-                            <option value="Nutricionista">Nutricionista</option>
-                            <option value="Ortopedista">Ortopedista</option>
-                    </select>
-                </div>
-               
                 
+                <div class="form-group col-md-3 pt-5">
+                   <label>CONVÊNIO</label> <input type="checkbox"  id="convenio" name="convenio" value="sim"> 
+                </div>
             </div>
+
+            <div class="form-group col-md-3 p-2">
+                    <label> DIAGNÓSTICO</label><textarea  class="form-control" id="diagnostico"  name="diagnostico"></textarea>
+                </div>
             <button type="submit" class="btn btn-danger ">Salvar</button>
             
     </form>

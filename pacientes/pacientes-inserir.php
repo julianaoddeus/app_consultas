@@ -1,18 +1,27 @@
 <?php
 $nome = $_POST['nome'];
 $telefone = $_POST['telefone'];
-$crm = $_POST['crm'];
-$especialidade = $_POST['especialidade'];
+$dataNascimento = $_POST['dataNascimento'];
+$convenio = $_POST['convenio'];
+$diagnostico = $_POST['diagnostico'];
 
 
 include "../includes/conexao.php";
-$sqlInserir = "INSERT INTO tb_medicos(nome, telefone, crm, especialidade) VALUES('{$nome}' , '{$telefone}' , '{$crm}' , '{$especialidade}');";
+$sqlInserir = "INSERT INTO tb_pacientes(nome, telefone, dataNascimento, convenio, diagnostico
+) 
+VALUES(
+    '{$nome}' ,
+    '{$telefone}' ,
+    '{$dataNascimento}' , 
+    '{$convenio}',
+    '{$diagnostico}'
+    );";
 
 $resultado = mysqli_query($conexao, $sqlInserir);
 
 if($resultado){
-    echo "Médico inserido com sucesso!<br>";
-    echo "<a href='medicos-listar.php' >VOLTAR</a>";
+    echo "Paciente inserido com sucesso!<br>";
+    echo "<a href='pacientes-listar.php' >VOLTAR</a>";
 }else{
     echo "Algum erro aconteceu";
 }
