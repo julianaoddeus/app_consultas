@@ -13,10 +13,11 @@ $sqlAlterar = "UPDATE tb_pacientes SET
                     nome = '{$nome}', 
                     telefone = '{$telefone}', 
                     dataNascimento = '{$dataNascimento}', 
-                    convenio = '{$convenio}' 
-                    WHERE id = '{$id_paciente}'";
+                    convenio = '{$convenio}' ,
+                    diagnostico = '{$diagnostico}'
+                    WHERE id = {$id_paciente};";
 
-$resultado = mysqli_query($conexao, $sqlAlterar);
+$resultado = mysqli_fetch_assoc($conexao, $sqlAlterar);
 
 if($resultado){
     echo "Alterado com sucesso <br>";

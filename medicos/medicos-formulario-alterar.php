@@ -27,11 +27,11 @@ while($medico = mysqli_fetch_assoc($listaDeMedicos)){
             
             <div class="form-row d-flex pb-3 ">
                 <div class="form-group col-md-3 p-2">
-                    <label>NOME</label><input type="text" class="form-control" id="nome" name="nome">
+                    <label>NOME</label><input type="text" class="form-control" id="nome" name="nome" value="<?php echo $nome; ?>">
                 </div>
 
                 <div class="form-group col-md-3 p-2">
-                    <label>TELEFONE</label><input type="text" class="form-control" id="telefone" name="telefone" >
+                    <label>TELEFONE</label><input type="text" class="form-control" id="telefone" name="telefone" value="<?php echo $telefone; ?>">
                 </div> 
                 
                 <br>
@@ -39,7 +39,7 @@ while($medico = mysqli_fetch_assoc($listaDeMedicos)){
 
             <div class="form-row d-flex pb-3">  
                  <div class="form-group col-md-3 p-2">
-                    <label>CRM</label><input type="text" class="form-control" id="crm"  name="crm">
+                    <label>CRM</label><input type="text" class="form-control" id="crm"  name="crm" value="<?php echo $crm; ?>">
                 </div>
                 <div class="form-group col-md-3 p-2">
                     <label>ESPECIALIDADES</label>
