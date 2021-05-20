@@ -43,8 +43,8 @@ CREATE TABLE `bd_consultorio`.`TB_MEDICOS` (
     `especialidade` VARCHAR(50) NOT NULL ,    PRIMARY KEY  (`id`)
 ) 
 ENGINE = InnoDB;
-
-
+```
+```sql
 CREATE TABLE `bd_consultorio`.`TB_PACIENTES` ( 
     `id` INT NOT NULL AUTO_INCREMENT ,  
     `nome` VARCHAR(100) NOT NULL ,  
@@ -55,4 +55,36 @@ CREATE TABLE `bd_consultorio`.`TB_PACIENTES` (
      PRIMARY KEY  (`id`)
 ) 
 ENGINE = InnoDB;
+```
+```sql
+CREATE TABLE `tb_agenda` (
+  `id` int(11) NOT NULL,
+  `data` date NOT NULL,
+  `hora` time NOT NULL,
+  `id_medico` int(11) NOT NULL,
+  `sala` varchar(20) NOT NULL,
+  `id_paciente` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE `tb_agenda`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_agenda_medico` (`id_medico`),
+  ADD KEY `fk_agenda_paciente` (`id_paciente`);
+
+ALTER TABLE `tb_agenda`
+  ADD CONSTRAINT `fk_agenda_medico` FOREIGN KEY (`id_medico`) REFERENCES `tb_medicos` (`id`),
+  ADD CONSTRAINT `fk_agenda_paciente` FOREIGN KEY (`id_paciente`) REFERENCES `tb_pacientes` (`id`);
+COMMIT;
+```
+``` sql
+SELECT 
+                a.id, 
+                a.data, 
+                a.hora, 
+                m.nome as 'NomeMedico', 
+                a.sala, 
+                p.nome as 'NomePaciente' 
+                FROM tb_agenda a 
+                INNER JOIN tb_pacientes p ON a.id_paciente = p.id 
+                INNER JOIN tb_medicos m ON a.id_medico = m.id
 ```
