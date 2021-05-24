@@ -42,8 +42,8 @@ $agenda = mysqli_query($conexao, $sqlBusca);
         echo "<tr>";
         echo "<td>{$row_agenda['id']}</td>";
 
-        $dataCorrigida = date("d/m/Y", strtotime($row_agenda['data_consulta']));
-        echo "<td>{$dataCorrigida}</td>";
+        $dataAgenda = date("d/m/Y", strtotime($row_agenda['data_consulta']));
+        echo "<td>{$dataAgenda}</td>";
 
         echo "<td>{$row_agenda['hora']}</td>";
         echo "<td>{$row_agenda['nomeMedico']}</td>";

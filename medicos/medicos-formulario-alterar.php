@@ -4,7 +4,8 @@
 <?php include "../includes/conexao.php";
 
 $id_medico = $_GET["id_medico"];
-$sqlBusca = "SELECT * FROM tb_medicos WHERE id= {$id_medico};";
+
+$sqlBusca = "SELECT * FROM tb_medicos WHERE id = {$id_medico};";
 $listaDeMedicos = mysqli_query($conexao, $sqlBusca);
 
 $nome = $telefone = $crm = $especialidade = "";

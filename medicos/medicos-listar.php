@@ -10,7 +10,7 @@
     include "../includes/conexao.php";
 
     $sqlBusca = "SELECT * FROM  tb_medicos;";
-    $resultado = mysqli_query($conexao, $sqlBusca);
+    $medicos = mysqli_query($conexao, $sqlBusca);
     
 ?>
 
@@ -28,7 +28,7 @@
   </thead>
     
 <?php 
-    while($row_medico = mysqli_fetch_assoc($resultado)){
+    while($row_medico = mysqli_fetch_assoc($medicos)){
         echo "<tr>";
         echo "<td>{$row_medico['id']}</td>";
         echo "<td>{$row_medico['nome']}</td>";

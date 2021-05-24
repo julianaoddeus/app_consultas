@@ -21,7 +21,7 @@ while ($row = mysqli_fetch_assoc($listaDePacientes)){
 <div class="container">
     <form name="formulario-inserir-pacientes" method="post" action="pacientes-alterar.php">
             <br>
-            <input type="hidden" name="id_paciente" value="<?php echo $_GET['id_paciente'];?>">
+            <input type="hidden" name="id_paciente" value="<?php echo $id_paciente;?>">
             
             <div class="form-row d-flex pb-3 ">
                 <div class="form-group col-md-3 p-2">
@@ -46,9 +46,11 @@ while ($row = mysqli_fetch_assoc($listaDePacientes)){
                     $marcado = "";
                     if($convenio == "sim"){
                         $marcado = "checked";
+                    }else{
+                        $marcado = "não";
                     }
                    ?>
-                   <input type="checkbox"  name="convenio" value="sim" <?php echo $marcado;?>> 
+                   <input type="checkbox"  name="convenio" value="" <?php echo $marcado;?>> 
                 </div>  
                 
                  <div class="form-group col-md-3 p-2 "> 
