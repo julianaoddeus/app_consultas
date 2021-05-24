@@ -3,7 +3,7 @@
 <hr>
 
 <p>
-    <a href="medicos-formulario-inserir.php" class="btn btn-danger bi-plus-circle">Novo médico</a>
+    <a href="medicos-formulario-inserir.php" class="btn btn-danger bi-plus-circle"><i class="bi bi-plus-circle"></i>Novo médico</a>
 </p>
 
 <?php
@@ -35,8 +35,8 @@
         echo "<td>{$row_medico['telefone']}</td>";
         echo "<td>{$row_medico['crm']}</td>";
         echo "<td>{$row_medico['especialidade']}</td>";
-        echo "<td><a href='medicos-formulario-alterar.php?id_medico={$row_medico['id']}'>Alterar</a> | "; 
-        echo "<a href='medicos-excluir.php?id_medico={$row_medico['id']}'>Excluir</a></td>";
+        echo "<td><a class='btn btn-warning' href='medicos-formulario-alterar.php?id_medico={$row_medico['id']}'><i class='bi bi-pencil-square'></i></a>  "; 
+        echo "<a class='btn btn-danger' href='medicos-excluir.php?id_medico={$row_medico['id']}'><i class='bi bi-x'></i></a></td>";
         echo "<tr>";
     }
 ?>

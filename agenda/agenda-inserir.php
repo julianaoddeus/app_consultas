@@ -1,8 +1,9 @@
+  
 <?php
-$id_agenda = $_POST['id_agenda'];
+$nome_paciente = $_POST['id_paciente'];
 $data = $_POST['data'];
 $hora = $_POST['hora'];
-$id_medico = $_POST['id_medico'];
+$nome_medico = $_POST['id_medico'];
 $sala = $_POST['sala'];
 
 
@@ -10,10 +11,10 @@ include "../includes/conexao.php";
 $sqlInserir = "INSERT INTO tb_agenda(id_paciente, data_consulta, hora, id_medico, sala
 ) 
 VALUES(
-    '{$id_agenda' , 
+    '{$nome_paciente}' , 
     '{$data}' , 
     '{$hora}' , 
-    '{$id_medico}', 
+    '{$nome_medico}', 
     '{$sala}'
     );";
 
