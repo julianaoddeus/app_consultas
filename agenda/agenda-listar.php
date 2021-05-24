@@ -49,8 +49,8 @@ $agenda = mysqli_query($conexao, $sqlBusca);
         echo "<td>{$row_agenda['nomeMedico']}</td>";
         echo "<td>{$row_agenda['sala']}</td>";
         echo "<td>{$row_agenda['nomePaciente']}</td>";
-        echo "<td><a class='btn btn-warning' href='agenda-formulario-alterar.php?id={$row_agenda['id']}'><i class='bi bi-pencil-square'></i></a> | "; 
-        echo "<a class='btn btn-danger' href='agenda-excluir.php?id_medico={$row_agenda['id']}'>Excluir</a></td>";
+        echo "<td><a href='agenda-formulario-alterar.php?id={$row_agenda['id']}'>Alterar</a> | "; 
+        echo "<a href='agenda-excluir.php?id_medico={$row_agenda['id']}'>Excluir</a></td>";
         echo "<tr>";
     }
 

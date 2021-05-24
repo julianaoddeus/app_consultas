@@ -28,7 +28,7 @@ while($agenda = mysqli_fetch_assoc($listaAgenda)){
             
             <div class="form-row d-flex pb-3 ">
                 <div class="form-group col-md-3 p-2">
-                    <label>DATA</label><input type="date" class="form-control" name="data_consulta" value="<?php echo $data; ?>">
+                    <label>DATA</label><input type="date" class="form-control" name="data" value="<?php echo $data; ?>">
                 </div>
 
                 <div class="form-group col-md-3 p-2">
