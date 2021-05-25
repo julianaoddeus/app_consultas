@@ -19,7 +19,7 @@ $sqlBusca = "SELECT
             INNER JOIN tb_pacientes p ON a.id_paciente = p.id 
             INNER JOIN tb_medicos m ON a.id_medico = m.id";
 
-$agenda = mysqli_query($conexao, $sqlBusca);
+$listaAgenda = mysqli_query($conexao, $sqlBusca);
 
 ?>
 
@@ -38,19 +38,19 @@ $agenda = mysqli_query($conexao, $sqlBusca);
     </tr>
   </thead>
 <?php
-    while($row_agenda = mysqli_fetch_assoc($agenda)){
+    while($agenda = mysqli_fetch_assoc($listaAgenda)){
         echo "<tr>";
-        echo "<td>{$row_agenda['id']}</td>";
+        echo "<td>{$agenda['id']}</td>";
 
-        $dataAgenda = date("d/m/Y", strtotime($row_agenda['data_consulta']));
+        $dataAgenda = date("d/m/Y", strtotime($agenda['data_consulta']));
         echo "<td>{$dataAgenda}</td>";
 
-        echo "<td>{$row_agenda['hora']}</td>";
-        echo "<td>{$row_agenda['nomeMedico']}</td>";
-        echo "<td>{$row_agenda['sala']}</td>";
-        echo "<td>{$row_agenda['nomePaciente']}</td>";
-        echo "<td><a href='agenda-formulario-alterar.php?id={$row_agenda['id']}'>Alterar</a> | "; 
-        echo "<a href='agenda-excluir.php?id_medico={$row_agenda['id']}'>Excluir</a></td>";
+        echo "<td>{$agenda['hora']}</td>";
+        echo "<td>{$agenda['nomeMedico']}</td>";
+        echo "<td>{$agenda['sala']}</td>";
+        echo "<td>{$agenda['nomePaciente']}</td>";
+        echo "<td><a href='agenda-formulario-alterar.php?id={$agenda['id']}'>Alterar</a> | "; 
+        echo "<a href='agenda-excluir.php?id_agenda={$agenda['id']}'>Excluir</a></td>";
         echo "<tr>";
     }
 

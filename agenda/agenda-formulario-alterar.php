@@ -1,13 +1,14 @@
-<?php include "../includes/cabecalho.php";?>
+<?php 
+include "../includes/cabecalho.php" ; 
+include "../includes/conexao.php";
 
 
-<?php include "../includes/conexao.php";
+$id_agenda = $_GET['id'];
 
-$id_agenda = $_GET["id_agenda"];
-$sqlBusca = "SELECT * FROM tb_agenda WHERE id = {$id_agenda};";
-$listaAgenda = mysqli_query($conexao, $sqlBusca);
-
+$sqlBuscar = "SELECT * FROM tb_agenda WHERE id = {$id_agenda}";
 $data = $hora = $id_medico = $sala = $id_paciente = "";
+
+$listaAgenda = mysqli_query($conexao , $sqlBuscar);
 
 while($agenda = mysqli_fetch_assoc($listaAgenda)){
     $data = $agenda['data_consulta'];
@@ -18,12 +19,11 @@ while($agenda = mysqli_fetch_assoc($listaAgenda)){
 }
 ?>
 
-
 <div class="container">
-    <form name="cadastro-agenda" method="POST" action="agenda-alterar.php">
+    <form name="cadastro-agenda" method="POST" action="agenda-inserir.php">
            
            <div>
-                <input type="hidden" name="id_agenda" value="<?php echo $id_agenda; ?>">
+                <input type="hidden" name="id" value="<?php echo $id_agenda; ?>">
            </div>
             
             <div class="form-row d-flex pb-3 ">

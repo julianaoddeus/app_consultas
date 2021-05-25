@@ -50,7 +50,7 @@ while ($row = mysqli_fetch_assoc($listaDePacientes)){
                         $marcado = "não";
                     }
                    ?>
-                   <input type="checkbox"  name="convenio" value="" <?php echo $marcado;?>> 
+                   <input type="checkbox"  name="convenio" value=" <?php echo $marcado;?>"> 
                 </div>  
                 
                  <div class="form-group col-md-3 p-2 "> 
