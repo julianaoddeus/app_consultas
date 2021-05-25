@@ -88,3 +88,13 @@ SELECT
                 INNER JOIN tb_pacientes p ON a.id_paciente = p.id 
                 INNER JOIN tb_medicos m ON a.id_medico = m.id
 ```
+
+Criação da tabela usuários
+
+```sql
+CREATE TABLE `tb_usuarios` (
+  `id` int(11) NOT NULL,
+  `usuario` varchar(30) NOT NULL,
+  `senha` varchar(8) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+```

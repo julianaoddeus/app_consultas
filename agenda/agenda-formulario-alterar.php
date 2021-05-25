@@ -20,7 +20,7 @@ while($agenda = mysqli_fetch_assoc($listaAgenda)){
 ?>
 
 <div class="container">
-    <form name="cadastro-agenda" method="POST" action="agenda-inserir.php">
+    <form name="cadastro-agenda" method="POST" action="agenda-alterar.php">
            
            <div>
                 <input type="hidden" name="id" value="<?php echo $id_agenda; ?>">
