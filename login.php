@@ -11,7 +11,7 @@ $resultado = mysqli_query($conexao, $sqlBusca);
 if(mysqli_num_rows($resultado) > 0){
     header('Location:agenda/agenda-listar.php');
 }else{
-    header('Location: index.php?mensagem==errado');
+    header('Location: index.php?mensagem=errado');
 }
 
 ?>

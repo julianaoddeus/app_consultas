@@ -5,40 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <form method="post" action="login.php" name="formulario-login">
-    <div class="container px-4 py-5 mx-auto">
-        <div class="card card0">
-            <div class="d-flex flex-lg-row flex-column-reverse">
-                <div class="card card1">
-                    <div class="row justify-content-center my-auto">
-                        <div class="col-md-8 col-10 my-5">
-                            <h3 class="mb-5 text-center heading">APP CONSULTÓRIO</h3>
-                            <h6 class="msg-info">administração</h6>
-                            <div class="form-group"><label class="form-control-label text-muted">Usuário</label> <input name="usuario" class="form-control"> </div>
-                            <div class="form-group"> <label class="form-control-label text-muted">Senha</label> <input type="password" name="senha" class="form-control"> </div>
-                            <button type="submit" class="btn btn-primary">Acessar</button>
-                        </div>
-                    </div>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                
+                <form class="box" method="post" action="login.php" name="formulario-login">
+                    <h1>Login</h1>
+                    <p class="text-muted"> Please enter your login and password!</p> 
+                    <input type="text" name="usuario" > 
+                    <input type="password" name="senha" > 
+                    <a class="forgot text-muted" href="#">Forgot password?</a> 
+                    <p class="text-muted" id="msg"></p>
+                    <input type="submit" name="forgot" value="Login" href="#">
+                    
+                    <?php
+        
+                    if(isset($_GET['mensagem'])){
+                        if($_GET['mensagem'] == 'errado'){ 
+                        echo "<script type='text/javascript'>getElementById(msg).innerHTML = <p>usuário ou senha inválido.</p></script>";
+                            
+                        }
+                    }
+                    ?>    
+                    </form>
                 </div>
             </div>
         </div>
     </div>
         
         
-        <?php
-        
-            if(isset($GET['mensagem'])){
-                if($GET['mensagem'] == 'errado'){ 
-                   echo "<script type='text/javascript'> alert('usuário ou senha inválido')</script>";
-                    
-                }
-            }
-        
-        ?>    
-    </form>
-    
+       
+       
+
 </body>
 </html>
