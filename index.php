@@ -16,7 +16,7 @@
                 
                 <form class="box" method="post" action="login.php" name="formulario-login">
                     <h1>Login</h1>
-                    <p class="text-muted"> Please enter your login and password!</p> 
+                    <p class="text-muted"> APP consultório admin</p> 
                     <input type="text" name="usuario" > 
                     <input type="password" name="senha" > 
                     <a class="forgot text-muted" href="#">Forgot password?</a> 
