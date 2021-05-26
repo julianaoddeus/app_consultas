@@ -27,8 +27,10 @@
         
                     if(isset($_GET['mensagem'])){
                         if($_GET['mensagem'] == 'errado'){ 
-                        echo "<script type='text/javascript'>getElementById(msg).innerHTML = <p>usuário ou senha inválido.</p></script>";
+                        echo "usuário ou senha inválido.";
                             
+                        }else if($_GET['mensagem'] == 'login'){ 
+                            echo "Realize login para entrar";
                         }
                     }
                     ?>    

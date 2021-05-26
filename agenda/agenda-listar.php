@@ -1,9 +1,4 @@
-<?php session_start();
-include "../includes/cabecalho.php";
-include "../includes/verifica-login.php";
-
-echo $_SESSION['usuario'];
-?>
+<?php include "../includes/cabecalho.php";?>
 
 <hr>
 
