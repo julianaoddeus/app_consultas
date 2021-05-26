@@ -2,7 +2,12 @@
 $nome = $_POST['nome'];
 $telefone = $_POST['telefone'];
 $dataNascimento = $_POST['dataNascimento'];
-$convenio = $_POST['convenio'];
+if(isset($_POST['convenio'])){
+    $convenio = $_POST['convenio'];
+}else{
+    $convenio = 'não';
+}
+
 $diagnostico = $_POST['diagnostico'];
 
 
